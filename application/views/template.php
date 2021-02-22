@@ -37,7 +37,7 @@
         <nav class="navbar navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
-                    <a href="<?=base_url()?>assets/index2.html" class="navbar-brand"><b>Pameran</b>Virtual</a>
+                    <a href="<?=base_url()?>" class="navbar-brand"><b>Pameran</b>Virtual</a>
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
                         <i class="fa fa-bars"></i>
                     </button>
@@ -58,45 +58,25 @@
                             </ul>
                         </li>
                     </ul>
-                    <form class="navbar-form navbar-left" role="search">
-                        <div class="form-group">
-                        <input type="text" class="form-control" id="navbar-search-input" placeholder="Search">
-                        </div>
-                    </form>
+                    
                 </div>
                 <div class="navbar-custom-menu">
                     <ul class="nav navbar-nav">
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <img src="<?=base_url()?>assets/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-                                <span class="hidden-xs">Alexander Pierce</span>
+                                <img src="<?=base_url()?>assets/img/picture.jpg" class="user-image" alt="User Image">
+                                <span class="hidden-xs"><?=$this->session->userdata('nama')?></span>
                             </a>
                             <ul class="dropdown-menu">
                                 <li class="user-header">
-                                    <img src="<?=base_url()?>assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                    <img src="<?=base_url()?>assets/img/picture.jpg" class="img-circle" alt="User Image">
 
                                     <p>
-                                        Alexander Pierce - Web Developer
-                                        <small>Member since Nov. 2012</small>
+                                    <?=$this->session->userdata('nama')?>
+                                        <small>Bergabung sejak <?=indo_date($this->session->userdata('join'))?></small>
                                     </p>
                                 </li>
-                                <li class="user-body">
-                                    <div class="row">
-                                        <div class="col-xs-4 text-center">
-                                        <a href="#">Followers</a>
-                                        </div>
-                                        <div class="col-xs-4 text-center">
-                                        <a href="#">Sales</a>
-                                        </div>
-                                        <div class="col-xs-4 text-center">
-                                        <a href="#">Friends</a>
-                                        </div>
-                                    </div>
-                                </li>
                                 <li class="user-footer">
-                                    <div class="pull-left">
-                                        <a href="#" class="btn btn-default btn-flat">Profile</a>
-                                    </div>
                                     <div class="pull-right">
                                         <a href="<?=site_url('auth/logout')?>" class="btn btn-default btn-flat">Sign out</a>
                                     </div>

@@ -23,7 +23,7 @@
             <a href="">Pameran<b>Virtual</b></a>
         </div>
         <!-- /.login-logo -->
-        <div class="login-box-body">
+        <div class="register-box-body">
             <p class="login-box-msg">Form Pendaftaran</p>
           
             <form class="form-horizontal" method="POST">
@@ -74,7 +74,7 @@
                 </div>
               </div>
             </form>
-            Sudah punya akun? Silahkan <a href="<?=site_url('auth/login')?>">Login</a>
+            Sudah punya akun? Silahkan <a href="<?=site_url('auth')?>">Login</a>
         </div>
         <!-- /.login-box-body -->
     </div>

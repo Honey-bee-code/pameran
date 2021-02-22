@@ -31,6 +31,7 @@ class User_m extends CI_Model {
         $param['email'] = $post['Email'];
         $param['no_hp'] = $post['Telepon'];
         $param['aktif'] = '0';
+        $param['joined'] = date('Y-m-d');
 
         
         $this->db->insert('users', $param);
