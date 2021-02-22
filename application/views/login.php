@@ -43,9 +43,7 @@
                     </div>
                 </div>
             </form>
-            <div class="container">
-            Tidak punya akun? <a href="">Register</a>
-            </div>
+            Tidak punya akun? Silahkan <a href="<?=site_url('auth/register')?>">Register</a>
         </div>
         <!-- /.login-box-body -->
     </div>

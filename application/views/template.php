@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AdminLTE 2 | Top Navigation</title>
+    <title>Pameran Virtual</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -20,6 +20,14 @@
     <link rel="stylesheet" href="<?=base_url()?>assets/dist/css/skins/_all-skins.min.css">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <link rel="icon" href="<?=base_url('assets/img/bee.png')?>">
+    <style>
+    .content-wrapper {
+    background-image: url("<?=base_url('assets/img/begrond2.png')?>");
+    /* background-repeat: no-repeat; */
+    /* background-size:cover */
+    }
+    </style>
 </head>
 <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
 <body class="hold-transition skin-blue layout-top-nav">
