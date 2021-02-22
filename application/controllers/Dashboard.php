@@ -4,7 +4,7 @@ class Dashboard extends CI_Controller {
 
 	public function index()
 	{
-		// tidak_login();
+		tidak_login();
 		// $this->load->model(['barang_m', 'customer_m']);
 		// $data['total_barang'] = $this->barang_m->hitungJumlahBarang();
 		// $data['total_pelanggan'] = $this->customer_m->hitungJumlahPelanggan();
