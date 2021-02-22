@@ -1,14 +1,3 @@
-<section class="content-header">
-    <h1>
-    Stand Pameran
-    <small>Pameran Virtual 1.0</small>
-    </h1>
-    <ol class="breadcrumb">
-    <li><a href="<?=site_url()?>"><i class="fa fa-dashboard"></i> Home</a></li>
-    <li class="active">Stand Pameran</li>
-    </ol>
-</section>
-
 <!-- Main content -->
 <section class="content">
 <div class="row">
@@ -19,7 +8,7 @@
 
             <h3 class="profile-username text-center"><?=$this->session->userdata('nama')?></h3>
 
-            <p class="text-muted text-center">Software Engineer</p>
+            <p class="text-muted text-center">Calligrapher / Programmer</p>
 
             <ul class="list-group list-group-unbordered">
                 <li class="list-group-item">
@@ -85,15 +74,15 @@
             <div class="tab-content">
                 <div class="active tab-pane" id="images">
                     <style>
-                        a {
+                        /* a {
                             color: #FFF;
-                        }
-                        a:hover {
-                            color: yellow;
+                        } */
+                        /* a:hover {
+                            color: blue;
                             text-decoration: underline;
-                        }
+                        } */
                         .thumbnails img {
-                            height: 50px;
+                            height: 100px;
                             border: 4px solid #555;
                             padding: 1px;
                             margin: 0 10px 10px 0;
@@ -109,31 +98,38 @@
                             padding: 1px;
                             width: 800px;
                         }
+                        .scroll{
+                        width: 800px;
+                        background: white;
+                        padding: 10px;
+                        overflow: scroll;
+                        height: 150px;
+                        
+                        
+                        }
                     </style>
-                    <div class="thumbnails">
-                        <img onmouseover="preview.src=img1.src" name="img1" src="<?php echo base_url();?>assets/img/photo1.png" alt=""/>
-                        <img onmouseover="preview.src=img2.src" name="img2" src="<?php echo base_url();?>assets/img/photo2.png" alt=""/>
-                        <img onmouseover="preview.src=img3.src" name="img3" src="<?php echo base_url();?>assets/img/photo3.jpg" alt=""/>
-                        <img onmouseover="preview.src=img4.src" name="img4" src="<?php echo base_url();?>assets/img/photo4.jpg" alt=""/>
-                        <img onmouseover="preview.src=img11.src" name="img11" src="<?php echo base_url();?>assets/img/photo5.jpg" alt=""/>
-                        <img onmouseover="preview.src=img12.src" name="img12" src="<?php echo base_url();?>assets/img/photo6.jpg" alt=""/>
-                        <img onmouseover="preview.src=img5.src" name="img5" src="<?php echo base_url();?>assets/img/photo1.png" alt=""/>
-                        <img onmouseover="preview.src=img6.src" name="img6" src="<?php echo base_url();?>assets/img/photo2.png" alt=""/>
-                        <img onmouseover="preview.src=img7.src" name="img7" src="<?php echo base_url();?>assets/img/photo3.jpg" alt=""/>
-                        <img onmouseover="preview.src=img8.src" name="img8" src="<?php echo base_url();?>assets/img/photo4.jpg" alt=""/>
-                        <img onmouseover="preview.src=img9.src" name="img9" src="<?php echo base_url();?>assets/img/photo1.png" alt=""/>
-                        <img onmouseover="preview.src=img10.src" name="img10" src="<?php echo base_url();?>assets/img/photo2.png" alt=""/>
+                    <div class="thumbnails scroll">
+                        <img onmouseover="preview.src=img1.src" name="img1" src="<?=base_url('assets/img/20200408_113343.jpg')?>"/>
+                        <img onmouseover="preview.src=img2.src" name="img2" src="<?=base_url('assets/img/20200409_193548.jpg')?>"/>
+                        <img onmouseover="preview.src=img3.src" name="img3" src="<?=base_url('assets/img/20200411_085440.jpg')?>"/>
+                        <img onmouseover="preview.src=img4.src" name="img4" src="<?=base_url('assets/img/20200416_180246.jpg')?>"/>
+                        <img onmouseover="preview.src=img5.src" name="img5" src="<?=base_url('assets/img/20200421_022134.jpg')?>"/>
+                        <img onmouseover="preview.src=img6.src" name="img6" src="<?=base_url('assets/img/20200422_111854.jpg')?>"/>
+                        <img onmouseover="preview.src=img7.src" name="img7" src="<?=base_url('assets/img/20200422_233634.jpg')?>"/>
+                        <img onmouseover="preview.src=img8.src" name="img8" src="<?=base_url('assets/img/20200521_133704.jpg')?>"/>
+                        <img onmouseover="preview.src=img9.src" name="img9" src="<?=base_url('assets/img/20200605_104117.jpg')?>"/>
                     </div><br/>
 
                     <div class="preview" align="center">
-                        <img name="preview" src="<?php echo base_url();?>assets/img/photo1.png" alt=""/>
+                        <img name="preview" src="<?=base_url('assets/img/20200408_113343.jpg')?>" alt=""/>
                     </div>
                 </div>
                 <div class="tab-pane" id="videos">
-                   Videos
+                    <div class="video">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/fD0m8J1WeG8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
                 </div>
                 <div class="tab-pane" id="texts">
-                    Texts
                 </div>
             </div>
         </div>

@@ -34,7 +34,7 @@
     <div class="wrapper">
 
     <header class="main-header">
-        <nav class="navbar navbar-static-top">
+        <nav class="navbar navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
                     <a href="<?=base_url()?>" class="navbar-brand"><b>Pameran</b>Virtual</a>
@@ -88,6 +88,8 @@
             </div>
         </nav>
     </header>
+    <br>
+    <br>
     <div class="content-wrapper">
         <div class="container">
             <?php echo $isi_konten ?>

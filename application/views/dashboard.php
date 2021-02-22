@@ -3,14 +3,9 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-2">
-                <a href="<?=site_url('stand')?>">Contoh Stand Pameran</a>
+                <a class="btn btn-success" href="<?=site_url('stand')?>">Contoh Stand Pameran</a>
             </div>
             <style>
-                h2{
-                    font-family: sans-serif;
-                    font-weight: normal;
-                }
-
                 .malasngoding-slider { 
                     border: 10px solid #efefef; 
                     position: relative; 
