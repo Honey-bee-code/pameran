@@ -44,8 +44,8 @@
                 </div>
                 <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li class=""><a href="#">Link</a></li>
-                            <li class="dropdown">
+                        <!-- <li class=""><a href="">Exhibitor</a></li> -->
+                            <!-- <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="#">Action</a></li>
@@ -55,7 +55,7 @@
                                 <li><a href="#">Separated link</a></li>
                                 <li class="divider"></li>
                                 <li><a href="#">One more separated link</a></li>
-                            </ul>
+                            </ul> -->
                         </li>
                     </ul>
                     
@@ -71,6 +71,7 @@
                                 <li class="user-header">
                                     <img src="<?=base_url()?>assets/img/picture.jpg" class="img-circle" alt="User Image">
 
+                                    
                                     <p>
                                     <?=$this->session->userdata('nama')?>
                                         <small>Bergabung sejak <?=indo_date($this->session->userdata('join'))?></small>
@@ -78,7 +79,10 @@
                                 </li>
                                 <li class="user-footer">
                                     <div class="pull-right">
-                                        <a href="<?=site_url('auth/logout')?>" class="btn btn-default btn-flat">Sign out</a>
+                                        <a href="<?=site_url('auth/logout')?>" class="btn btn-danger btn-flat">Sign out</a>
+                                    </div>
+                                    <div class="pull-left">
+                                        <a href="<?=base_url('exhibitor')?>" class="btn btn-primary btn-flat">My Page</a>
                                     </div>
                                 </li>
                             </ul>

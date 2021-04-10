@@ -1,152 +1,31 @@
 <!-- Main content -->
 <section class="content">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-2">
-                <a class="btn btn-success" href="<?=site_url('stand')?>">Contoh Stand Pameran</a>
-            </div>
-            <style>
-                .malasngoding-slider { 
-                    border: 10px solid #efefef; 
-                    position: relative; 
-                    overflow: hidden; 
-                    background: #efefef;
-                }
-
-                .malasngoding-slider { 
-                    margin:20px auto;
-                    width: 768px;
-                    height: 450px; 
-                }
-
-                .isi-slider img { 
-                    width: 768px;
-                    height: 450px; 
-                    float: left;
-                }
-
-                .isi-slider { 
-                    position: absolute; 
-                    width:3900px;  
-
-                    /*pengaturan durasi lama tampil gambar bisa di atur di bawah ini*/
-                    animation-name:slider;
-                    animation-duration:12s;
-                    animation-timing-function: ease-in-out;
-                    animation-iteration-count:infinite;
-                    -webkit-animation-name:slider;
-                    -webkit-animation-duration:12s;
-                    -webkit-animation-timing-function: ease-in-out;
-                    -webkit-animation-iteration-count:infinite;
-                    -moz-animation-name:slider;
-                    -moz-animation-duration:12s;
-                    -moz-animation-timing-function: ease-in-out;
-                    -moz-animation-iteration-count:infinite;
-                    -o-animation-name:slider;
-                    -o-animation-duration:12s;
-                    -o-animation-timing-function: ease-in-out;
-                    -o-animation-iteration-count:infinite;
-                }
-
-
-                /*saat gambar di hover oleh cursor mouse maka berhenti slide*/
-                .isi-slider:hover { 
-                    -webkit-animation-play-state:paused; 
-                    -moz-animation-play-state:paused; 
-                    -o-animation-play-state:paused; 
-                    animation-play-state:paused; }
-                }
-
-                .isi-slider img { 
-                    float: right; 
-                }
-
-                .malasngoding-slider:after { 
-                    font-size: 150px; 
-                    position: absolute; 
-                    z-index: 12; 
-                    color: rgba(255,255,255, 0); 
-                    left: 300px; top: 80px; 
-                    -webkit-transition: 1s all ease-in-out; 
-                    -moz-transition: 1s all ease-in-out; 
-                    transition: 1s all ease-in-out; 
-                }
-
-                .malasngoding-slider:hover:after { 
-                    color: rgba(255,255,255, 0.6);  
-                }
-
-
-
-                @-moz-keyframes slider {     
-                    0% { left: 0; opacity: 0; }     
-                    2% { opacity: 1; }     
-                    20% { left: 0; opacity: 1; }     
-                    21% { opacity: 0; }     
-                    24% { opacity: 0; }     
-                    25% { left: -768px; opacity: 1; }       
-                    45% { left: -768px; opacity: 1; }     
-                    46% { opacity: 0; }     
-                    48% { opacity: 0; }     
-                    50% { left: -1536px; opacity: 1; }     
-                    70% { left: -1536px; opacity: 1; }     
-                    72% { opacity: 0; }     
-                    74% { opacity: 0; }    
-                    75% { left: -2304px; opacity: 1; }   	
-                    95% { left: -2304px; opacity: 1; }   	
-                    97% { left: -2304px; opacity: 0;}   	
-                    100% { left: 0; opacity: 0; }
-                } 
-
-                @-webkit-keyframes slider {     
-                    0% { left: 0; opacity: 0; }     
-                    2% { opacity: 1; }     
-                    20% { left: 0; opacity: 1; }     
-                    21% { opacity: 0; }     
-                    24% { opacity: 0; }     
-                    25% { left: -768px; opacity: 1; }       
-                    45% { left: -768px; opacity: 1; }     
-                    46% { opacity: 0; }     
-                    48% { opacity: 0; }     
-                    50% { left: -1536px; opacity: 1; }     
-                    70% { left: -1536px; opacity: 1; }     
-                    72% { opacity: 0; }     
-                    74% { opacity: 0; }    
-                    75% { left: -2304px; opacity: 1; }   	
-                    95% { left: -2304px; opacity: 1; }   	
-                    97% { left: -2304px; opacity: 0;}   	
-                    100% { left: 0; opacity: 0; }
-                } 
-
-
-                @keyframes slider {     
-                    0% { left: 0; opacity: 0; }     
-                    2% { opacity: 1; }     
-                    20% { left: 0; opacity: 1; }     
-                    21% { opacity: 0; }     
-                    24% { opacity: 0; }     
-                    25% { left: -768px; opacity: 1; }     
-                    45% { left: -768px; opacity: 1; }     
-                    46% { opacity: 0; }     
-                    48% { opacity: 0; }     
-                    50% { left: -1536px; opacity: 1; }     
-                    70% { left: -1536px; opacity: 1; }     
-                    72% { opacity: 0; }     
-                    74% { opacity: 0; }    
-                    75% { left: -2304px; opacity: 1; }   	
-                    95% { left: -2304px; opacity: 1; }   	
-                    97% { left: -2304px; opacity: 0; } 
-                    100% { left: 0; opacity: 0; }
-                }
-            </style>
-            <div class=malasngoding-slider>
-                <div class=isi-slider>
-                    <img src="<?php echo base_url();?>assets/img/photo1.png" alt="Gambar 1">
-                    <img src="<?php echo base_url();?>assets/img/photo2.png" alt="Gambar 2">
-                    <img src="<?php echo base_url();?>assets/img/photo3.jpg" alt="Gambar 3">
-                    <img src="<?php echo base_url();?>assets/img/photo4.jpg" alt="Gambar 4">
-                </div>
-            </div>
+    <div class="container" style="background-color: white;">
+        <h1>Data Exhibitor</h1>
+        <div class="box-body table-responsive">
+            <table class="table table-bordered table-striped" id="table">
+                <thead>
+                    <tr>
+                        <th width="20px">No</th>
+                        <th>Nama</th>
+                        <th>Alamat</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    $no = 1;
+                    foreach($row->result() as $key=>$data){?>
+                    <tr>
+                        <td><?=$no++?></td>
+                        <td><?=$data->nama?></td>
+                        <td><?=$data->alamat?></td>
+                        <td><a type="button" href="<?=site_url('stand?id='.$data->exhibitor_id)?>">To My Gallery</a></td>
+                    </tr>
+                    <?php
+                    } ?>
+                </tbody>
+            </table>
         </div>
     </div>
 </section>

@@ -4,24 +4,11 @@
     <div class="col-md-3">
         <div class="box box-primary">
             <div class="box-body box-profile">
-            <img class="profile-user-img img-responsive img-circle" src="<?=base_url()?>assets/img/photo5.jpg" alt="User profile picture">
-
-            <h3 class="profile-username text-center">Muhammad Aulia Hanifi</h3>
-
-            <p class="text-muted text-center">Calligrapher / Programmer</p>
-
-            <ul class="list-group list-group-unbordered">
-                <li class="list-group-item">
-                <b>Followers</b> <a class="pull-right">1,322</a>
-                </li>
-                <li class="list-group-item">
-                <b>Following</b> <a class="pull-right">543</a>
-                </li>
-                <li class="list-group-item">
-                <b>Friends</b> <a class="pull-right">13,287</a>
-                </li>
-            </ul>
-
+            <img class="profile-user-img img-responsive img-circle" style="width: 150px; height: 150px; object-fit: cover;" src="<?=is_null($row->photo) ? site_url('assets/img/profil/picture.jpg')  : 'assets/img/profil/'.$row->photo;?>" alt="User profile picture" >
+           
+            <h3 class="profile-username text-center"><?=$row->nama?></h3>
+           
+            
             <a href="#" class="btn btn-primary btn-block"><b>Follow</b></a>
             </div>
         </div>
@@ -32,29 +19,44 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-                <strong><i class="fa fa-book margin-r-5"></i> Education</strong>
+                <strong><i class="fa fa-book margin-r-5"></i> Prestasi</strong>
 
+                <?php
+                foreach($prestasi as $key=>$row){
+                ?>
                 <p class="text-muted">
-                    B.S. in Computer Science from the University of Tennessee at Knoxville
+                    <?=$row->prestasi?> - Tahun <?=$row->tahun?>
                 </p>
+                <?php
+                }
+                ?>
+                <hr>
 
+                <strong><i class="fa fa-book margin-r-5"></i> Exhibition</strong>
+
+                <?php
+                foreach($exhibition as $key=>$row){
+                ?>
+                <p class="text-muted">
+                    <?=$row->exhibition?> - Tahun <?=$row->tahun?>
+                </p>
+                <?php
+                }
+                ?>
                 <hr>
 
                 <strong><i class="fa fa-map-marker margin-r-5"></i> Location</strong>
 
-                <p class="text-muted">Malibu, California</p>
+                <p class="text-muted"><?=$row->alamat?></p>
 
                 <hr>
 
-                <strong><i class="fa fa-pencil margin-r-5"></i> Skills</strong>
+                <strong><i class="fa fa-pencil margin-r-5"></i> Social Media</strong>
 
-                <p>
-                    <span class="label label-danger">UI Design</span>
-                    <span class="label label-success">Coding</span>
-                    <span class="label label-info">Javascript</span>
-                    <span class="label label-warning">PHP</span>
-                    <span class="label label-primary">Node.js</span>
-                </p>
+                <ul>
+                    <li><a href="">Facebook</a></li>
+                    <li><a href="">Instagram</a></li>
+                </ul>
 
                 <hr>
 
@@ -73,60 +75,20 @@
             </ul>
             <div class="tab-content">
                 <div class="active tab-pane" id="images">
-                    <style>
-                        /* a {
-                            color: #FFF;
-                        } */
-                        /* a:hover {
-                            color: blue;
-                            text-decoration: underline;
-                        } */
-                        .thumbnails img {
-                            height: 100px;
-                            border: 4px solid #555;
-                            padding: 1px;
-                            margin: 0 10px 10px 0;
-                        }
-
-                        .thumbnails img:hover {
-                            border: 4px solid #00ccff;
-                            cursor:pointer;
-                        }
-
-                        .preview img {
-                            border: 4px solid #444;
-                            padding: 1px;
-                            width: 800px;
-                        }
-                        .scroll{
-                        width: 800px;
-                        background: white;
-                        padding: 10px;
-                        overflow: scroll;
-                        height: 150px;
-                        
-                        
-                        }
-                    </style>
-                    <div class="thumbnails scroll">
-                        <img onmouseover="preview.src=img1.src" name="img1" src="<?=base_url('assets/img/20200408_113343.jpg')?>"/>
-                        <img onmouseover="preview.src=img2.src" name="img2" src="<?=base_url('assets/img/20200409_193548.jpg')?>"/>
-                        <img onmouseover="preview.src=img3.src" name="img3" src="<?=base_url('assets/img/20200411_085440.jpg')?>"/>
-                        <img onmouseover="preview.src=img4.src" name="img4" src="<?=base_url('assets/img/20200416_180246.jpg')?>"/>
-                        <img onmouseover="preview.src=img5.src" name="img5" src="<?=base_url('assets/img/20200421_022134.jpg')?>"/>
-                        <img onmouseover="preview.src=img6.src" name="img6" src="<?=base_url('assets/img/20200422_111854.jpg')?>"/>
-                        <img onmouseover="preview.src=img7.src" name="img7" src="<?=base_url('assets/img/20200422_233634.jpg')?>"/>
-                        <img onmouseover="preview.src=img8.src" name="img8" src="<?=base_url('assets/img/20200521_133704.jpg')?>"/>
-                        <img onmouseover="preview.src=img9.src" name="img9" src="<?=base_url('assets/img/20200605_104117.jpg')?>"/>
-                    </div><br/>
-
-                    <div class="preview" align="center">
-                        <img name="preview" src="<?=base_url('assets/img/20200408_113343.jpg')?>" alt=""/>
+                    <div class="container">
+                        <div class="row" display="inline-flex">
+                            <?php foreach($karya as $key=>$data) {?>
+                            <div class="col-md-2" style="text-align: center" >
+                                <img class="gambar" style="width: 150px; cursor: pointer;" data-toggle="modal" data-target="#modal" data-gambar="<?=site_url('assets/img/karya/'.$data->gambar)?>" src="<?=site_url('assets/img/karya/'.$data->gambar)?>" alt="">
+                                <span><?=$data->karya?></span>
+                            </div>
+                            <?php } ?>
+                        </div>
                     </div>
                 </div>
                 <div class="tab-pane" id="videos">
                     <div class="video">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/fD0m8J1WeG8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        
                     </div>
                 </div>
                 <div class="tab-pane" id="texts">
@@ -136,3 +98,35 @@
     </div>
 </div>
 </section>
+
+<div class="modal fade" id="modal">
+    <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Preview</h4>
+        </div>
+        <div class="modal-body">
+            <img src="" alt="" style="width: 100%">
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-default pull-right" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+    <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+            image.setAttribute('src', $(this).data('gambar'));
+</div>
+<!-- /.modal -->
+<script>
+    const gambar = document.querySelectorAll('.gambar');
+    for(let i = 0; i < gambar.length; i++){
+        gambar[i].addEventListener('click', function(){
+            let image = document.querySelector('.modal-body img');
+            image.setAttribute('src', $(this).data('gambar'));
+            console.log(image)
+        })
+    }
+</script>
