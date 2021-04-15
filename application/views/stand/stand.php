@@ -74,7 +74,7 @@
                 <li><a href="#texts" data-toggle="tab">Text</a></li>
             </ul>
             <div class="tab-content">
-                <div class="active tab-pane timeline-body" id="images">
+                <div class="active tab-pane timeline-body" id="images" style="text-align: center">
                 <?php foreach($karya as $key=>$data) {?>
                     <img class="gambar" style="height: 240px; margin: 3px; cursor: pointer;" data-toggle="modal" data-target="#modal" data-gambar="<?=site_url('assets/img/karya/'.$data->gambar)?>" data-karya="<?=$data->karya?>" src="<?=site_url('assets/img/karya/'.$data->gambar)?>" alt="">
                 <?php } ?>
