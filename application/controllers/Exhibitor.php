@@ -13,9 +13,10 @@ class Exhibitor extends CI_Controller {
 		$data['row'] = $this->Exhibitor_m->get()->row();
 		$this->template->load('template', 'exhibitor', $data);
 	}
-	// public function edit($id)
-	// {
-	// 	$data['detail'] = $this->Exhibitor_m->get();
-	// 	$this->template->load('template', 'exhibitor');
-	// }
+	public function edit()
+	{
+		$post = $this->input->post(null, TRUE);
+		$this->Exhibitor_m->edit($post);
+		echo "<script>window.location='".site_url('exhibitor')."'</script>";
+	}
 }

@@ -74,17 +74,10 @@
                 <li><a href="#texts" data-toggle="tab">Text</a></li>
             </ul>
             <div class="tab-content">
-                <div class="active tab-pane" id="images">
-                    <div class="container">
-                        <div class="row" display="inline-flex">
-                            <?php foreach($karya as $key=>$data) {?>
-                            <div class="col-md-2" style="text-align: center" >
-                                <img class="gambar" style="width: 150px; cursor: pointer;" data-toggle="modal" data-target="#modal" data-gambar="<?=site_url('assets/img/karya/'.$data->gambar)?>" src="<?=site_url('assets/img/karya/'.$data->gambar)?>" alt="">
-                                <span><?=$data->karya?></span>
-                            </div>
-                            <?php } ?>
-                        </div>
-                    </div>
+                <div class="active tab-pane timeline-body" id="images">
+                <?php foreach($karya as $key=>$data) {?>
+                    <img class="gambar" style="height: 240px; margin: 3px; cursor: pointer;" data-toggle="modal" data-target="#modal" data-gambar="<?=site_url('assets/img/karya/'.$data->gambar)?>" data-karya="<?=$data->karya?>" src="<?=site_url('assets/img/karya/'.$data->gambar)?>" alt="">
+                <?php } ?>
                 </div>
                 <div class="tab-pane" id="videos">
                     <div class="video">
@@ -105,7 +98,7 @@
         <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Preview</h4>
+        <h4 class="modal-title"><?=$data->karya?></h4>
         </div>
         <div class="modal-body">
             <img src="" alt="" style="width: 100%">

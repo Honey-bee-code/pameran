@@ -39,6 +39,13 @@ class Exhibitor_m extends CI_Model {
         $query = $this->db->get();
         return $query;
     }
+    public function edit($post)
+    {
+        $param['nama'] = $post['nama'];
+        $param['alamat'] = $post['alamat'];
+        $this->db->where('exhibitor_id', $post['id']);
+        $this->db->update('exhibitor', $param);
+    }
 
     
 

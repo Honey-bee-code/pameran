@@ -26,7 +26,7 @@
         <div class="register-box-body">
             <p class="login-box-msg">Form Pendaftaran</p>
           
-            <form class="form-horizontal" method="POST">
+            <form class="form-horizontal" enctype="multipart/form-data" method="POST">
               <div class="form-group <?=form_error('Username') ? 'has-error' : null?>">
                 <label class="control-label col-sm-3" for="Username">Username:</label>
                 <div class="col-sm-9">
